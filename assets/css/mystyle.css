@@ -1,0 +1,20 @@
+.myContainer{
+    margin: 0;
+}
+
+.myBtn{
+    float: right;
+    margin-left: 1%;
+}
+
+.container1{
+    width: 100%;
+}
+
+.myDropdown{
+    float: right;
+}
+.loc{
+    display: block;
+    margin: 10px;
+}
