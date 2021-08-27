@@ -33,3 +33,22 @@
 .headAddHH{
     margin-bottom: 20px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #c5427f70;
+    background-color: rgb(63, 55, 55);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    /* background: #6dd3ff;  */
+    background: linear-gradient(90deg, #564ab1 0, #564ab1 100%);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background:  #dff044; 
+  }
