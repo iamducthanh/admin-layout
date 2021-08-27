@@ -14,7 +14,22 @@
 .myDropdown{
     float: right;
 }
+.footerAddHH{
+    float: right;
+    margin: 20px 0;
+}
 .loc{
     display: block;
     margin: 10px;
+}
+
+#menuTab1{
+    border-bottom: 2px solid #564ab1;
+}
+.menuTab{
+    padding-bottom: 10px;
+}
+
+.headAddHH{
+    margin-bottom: 20px;
 }
