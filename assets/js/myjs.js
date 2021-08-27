@@ -33,5 +33,12 @@ function closeModalAddHH(){
 function onModalAddHH(){
     document.getElementById('modalAddHH').style.display = 'unset'
 }
+$(function(){
+    $('*').keyup(function(e){
+        if(e.keyCode=='27'){
+            document.getElementById('modalAddHH').style.display = 'none'
+        }       
+    })
+  })
 document.getElementById("leftHH").style.display = 'none'
 document.getElementById("rightHH").className = 'col-lg-12';
