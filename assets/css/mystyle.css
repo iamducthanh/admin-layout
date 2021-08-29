@@ -8,6 +8,8 @@
     animation: example 1s;
 }
 
+
+
 @keyframes example {
     0% {
         width: 50%;
