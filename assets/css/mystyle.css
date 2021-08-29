@@ -2,6 +2,21 @@
     margin: 0;
 }
 
+
+#formLeft{
+    width: 100%;
+    animation: example 1s;
+}
+
+@keyframes example {
+    0% {
+        width: 50%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
 .myBtn{
     float: right;
     margin-left: 1%;
