@@ -69,3 +69,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background:  #dff044; 
   }
+
+  .locItem{
+      padding-left: 10%;
+  }
