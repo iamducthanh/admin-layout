@@ -26,9 +26,11 @@
             <div class="spinner"></div>
         </div>
     </div>
-    <div class="swal2-container swal2-center swal2-backdrop-show" id="modalAddHH" style="overflow-y: auto; display: none;">
-        <div aria-labelledby="swal2-title" aria-describedby="swal2-content" id="thanh1" class="swal2-popup swal2-modal swal2-show"
-            tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex; width: 90%;">
+    <div class="swal2-container swal2-center swal2-backdrop-show" id="modalAddHH"
+        style="overflow-y: auto; display: unset;">
+        <div aria-labelledby="swal2-title" aria-describedby="swal2-content" id="thanh1"
+            class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive"
+            aria-modal="true" style="display: flex; width: 90%;">
             <button type="button" class="swal2-close" onclick="closeModalAddHH();">×</button>
             <h5>Thêm hàng hóa</h5>
             <div class="row headAddHH" style="text-align: center;">
@@ -47,79 +49,93 @@
                                 <div class="row mb-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Mã hàng</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="text" placeholder="Artisanal kale" id="example-text-input">
+                                        <input class="form-control" type="text" placeholder="Artisanal kale"
+                                            id="example-text-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-search-input" class="col-sm-2 col-form-label">Mã vạch</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="search" placeholder="How do I shoot web" id="example-search-input">
+                                        <input class="form-control" type="search" placeholder="How do I shoot web"
+                                            id="example-search-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-email-input" class="col-sm-3 col-form-label">Tên hàng</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" type="email" placeholder="bootstrap@example.com" id="example-email-input">
+                                        <input class="form-control" type="email" placeholder="bootstrap@example.com"
+                                            id="example-email-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-url-input" class="col-sm-3 col-form-label">Nhóm hàng</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" type="url" placeholder="https://getbootstrap.com" id="example-url-input">
+                                        <input class="form-control" type="url" placeholder="https://getbootstrap.com"
+                                            id="example-url-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-tel-input" class="col-sm-3 col-form-label">Thường hiệu</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="example-tel-input">
+                                        <input class="form-control" type="tel" placeholder="1-(555)-555-5555"
+                                            id="example-tel-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-password-input" class="col-sm-2 col-form-label">Vị trí</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="password" placeholder="hunter2" id="example-password-input">
+                                        <input class="form-control" type="password" placeholder="hunter2"
+                                            id="example-password-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-number-input" class="col-sm-2 col-form-label">Number</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="number" placeholder="42" id="example-number-input">
+                                        <input class="form-control" type="number" placeholder="42"
+                                            id="example-number-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="example-datetime-local-input" class="col-sm-2 col-form-label">Date and time</label>
+                                    <label for="example-datetime-local-input" class="col-sm-2 col-form-label">Date and
+                                        time</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="datetime-local" placeholder="2011-08-19T13:45:00" id="example-datetime-local-input">
+                                        <input class="form-control" type="datetime-local"
+                                            placeholder="2011-08-19T13:45:00" id="example-datetime-local-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-date-input" class="col-sm-2 col-form-label">Date</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="date" placeholder="2011-08-19" id="example-date-input">
+                                        <input class="form-control" type="date" placeholder="2011-08-19"
+                                            id="example-date-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-month-input" class="col-sm-2 col-form-label">Month</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="month" placeholder="2011-08" id="example-month-input">
+                                        <input class="form-control" type="month" placeholder="2011-08"
+                                            id="example-month-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-week-input" class="col-sm-2 col-form-label">Week</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="week" placeholder="2011-W33" id="example-week-input">
+                                        <input class="form-control" type="week" placeholder="2011-W33"
+                                            id="example-week-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-time-input" class="col-sm-2 col-form-label">Time</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="time" placeholder="13:45:00" id="example-time-input">
+                                        <input class="form-control" type="time" placeholder="13:45:00"
+                                            id="example-time-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-color-input" class="col-sm-2 col-form-label">Color</label>
                                     <div class="col-sm-10">
-                                        <input type="color" class="form-control form-control-color mw-100" id="example-color-input" value="#655be6" title="Choose your color">
+                                        <input type="color" class="form-control form-control-color mw-100"
+                                            id="example-color-input" value="#655be6" title="Choose your color">
                                     </div>
                                 </div>
                                 <div class=" row mb-3">
@@ -130,7 +146,7 @@
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
-                                            </select>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -142,22 +158,25 @@
                                 <div class="row mb-3">
                                     <label for="example-email-input" class="col-sm-3 col-form-label">Giá vốn</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" type="email" placeholder="bootstrap@example.com" id="example-email-input">
+                                        <input class="form-control" type="email" placeholder="bootstrap@example.com"
+                                            id="example-email-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-url-input" class="col-sm-3 col-form-label">Giá bán</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" type="url" placeholder="https://getbootstrap.com" id="example-url-input">
+                                        <input class="form-control" type="url" placeholder="https://getbootstrap.com"
+                                            id="example-url-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="example-tel-input" class="col-sm-3 col-form-label">Tồn kho</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="example-tel-input">
+                                        <input class="form-control" type="tel" placeholder="1-(555)-555-5555"
+                                            id="example-tel-input">
                                     </div>
                                 </div>
-                                    <input type="checkbox"> Bán trực tiếp
+                                <input type="checkbox"> Bán trực tiếp
                             </div>
                         </div>
                     </div>
@@ -167,14 +186,22 @@
                         <div class="card-body">
                             <h4 class="card-title">Ảnh sản phẩm</h4>
                             <div class="mb-5">
-                                <form action="#" class="dropzone dz-clickable"> 
-                                    <div class="dz-message needsclick">
-                                        <div class="mb-3">
-                                            <i class="mdi mdi-cloud-upload display-4 text-muted"></i>
+                                <div class="dropzone dz-clickable dz-started">
+                                    <div class="dz-preview dz-processing dz-error dz-complete dz-image-preview">
+                                        <img class="dz-image" alt="trend-1.jpg"
+                                            src="https://static.wikia.nocookie.net/avatar/images/6/66/Ozai_versus_Avatar_Aang.png/revision/latest?cb=20120801065245">
+                                        <div class="dz-details">
+                                            <div class="dz-filename"><span data-dz-name="">trend-1.jpg</span><br/>
+                                                <span>Xóa</span>
+                                            </div>
                                         </div>
-                                        <h4>Chọn hình ảnh.</h4>
                                     </div>
-                                </form>
+                                    <div class="dz-preview dz-processing dz-error dz-complete dz-image-preview">
+                                        <img onclick="selectImage();" class="dz-image" alt="trend-1.jpg" style="border-radius: 15%; border: 1px solid black;"
+                                            src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg">
+                                    </div>
+                                    <input type="file" style="display: none;" id="inputImage">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,16 +212,16 @@
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
-                        </select>
+                    </select>
                 </div>
-                <br/>
+                <br />
                 <div class="row" style="margin: 0 20px;">
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Đơn vị</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
-                        </select>
+                    </select>
                 </div>
             </div>
             <div class="tabAddHH">
@@ -229,8 +256,6 @@
                             </span>
                         </a>
                     </div>
-
-
                     <button type="button"
                         class="btn btn-sm me-2 font-size-24 d-lg-none header-item waves-effect waves-light"
                         data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
@@ -733,9 +758,12 @@
                                                     <span> Loại hàng </span>
                                                 </a>
                                                 <ul class="sub-menu">
-                                                    <li><a class="locItem" style="padding-left: 10%;"><input type="checkbox" /> Hàng hóa</a></li>
-                                                    <li><a class="locItem" style="padding-left: 10%;"><input type="checkbox" /> Dịch vụ</a></li>
-                                                    <li><a class="locItem" style="padding-left: 10%;"><input type="checkbox" /> Combo - Đóng gói</a></li>
+                                                    <li><a class="locItem" style="padding-left: 10%;"><input
+                                                                type="checkbox" /> Hàng hóa</a></li>
+                                                    <li><a class="locItem" style="padding-left: 10%;"><input
+                                                                type="checkbox" /> Dịch vụ</a></li>
+                                                    <li><a class="locItem" style="padding-left: 10%;"><input
+                                                                type="checkbox" /> Combo - Đóng gói</a></li>
                                                 </ul>
                                             </li>
                                             <li>
@@ -764,7 +792,8 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <h1 class="header-title mb-4"><i class="mdi mdi-menu"
-                                                    style="font-size: 16pt;" onclick="editMenu();"></i> &ensp;Danh sách hàng hóa</h1>
+                                                    style="font-size: 16pt;" onclick="editMenu();"></i> &ensp;Danh sách
+                                                hàng hóa</h1>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="dropdown myDropdown myBtn">
@@ -819,7 +848,8 @@
                                                     + Thêm mới <i class="mdi mdi-chevron-down"></i>
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" href="#" onclick="onModalAddHH();">Thêm hàng hóa</a>
+                                                    <a class="dropdown-item" href="#" onclick="onModalAddHH();">Thêm
+                                                        hàng hóa</a>
                                                     <a class="dropdown-item" href="#">Another action</a>
                                                     <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div>
@@ -906,31 +936,14 @@
                 </div>
 
                 <div class="form-check form-switch mb-3">
-                    <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch" 
-                    data-bsStyle="assets/css/bootstrap-dark.min.css" 
-                    data-appStyle="assets/css/app-dark.min.css">
+                    <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch"
+                        data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css">
                     <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
                 </div>
             </div>
 
         </div> <!-- end slimscroll-menu-->
     </div>
-    <!-- <div class="right-bar">
-        <div data-simplebar class="h-100">
-            <div class="rightbar-title px-3 py-4">
-                <a href="javascript:void(0);" class="right-bar-toggle float-end">
-                    <i class="mdi mdi-close noti-icon"></i>
-                </a>
-                <h5 class="m-0">Settings</h5>
-            </div>
-            <hr class="mt-0">
-            <h6 class="text-center mb-0">Choose Layouts</h6>
-            <div class="p-4">
-
-            </div>
-
-        </div>
-    </div> -->
 
     <div class="rightbar-overlay"></div>
 
@@ -950,6 +963,9 @@
             }
         }
         onDataTest();
+        function selectImage(){
+            document.getElementById("inputImage").click();
+        }
     </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
