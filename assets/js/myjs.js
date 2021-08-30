@@ -3,7 +3,7 @@ function editMenu(){
     let right = document.getElementById("rightHH");
     if(left.style.display == 'none'){
         left.style.display = 'unset';
-        right.className = 'col-lg-9';
+        right.className = 'col-lg-10';
     } else {
         left.style.display = 'none';
         right.className = 'col-lg-12';
@@ -40,5 +40,4 @@ $(function(){
         }       
     })
   })
-document.getElementById("leftHH").style.display = 'none'
-document.getElementById("rightHH").className = 'col-lg-12';
+document.getElementById("rightHH").className = 'col-lg-10';
