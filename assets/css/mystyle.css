@@ -73,3 +73,6 @@
   .locItem{
       padding-left: 10%;
   }
+  .dd{
+      display: block;
+  }

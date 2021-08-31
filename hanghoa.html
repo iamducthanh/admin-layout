@@ -184,23 +184,24 @@
                 <div class="row">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Ảnh sản phẩm</h4>
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <h4 class="card-title">Ảnh sản phẩm</h4>
+                                </div>
+                                <div class="col-lg-3" style="text-align: right;">
+                                    <button class="btn btn-primary" style="margin-bottom: 10px;" onclick="selectImage()">Thêm ảnh sản phẩm</button>
+                                    <button class="btn btn-primary" onclick="submitImage()">Test Submit</button>
+                                </div>
+                               
+                            </div>
+                            <div id="containerImageOut">
+                                
+                            </div>
+                            <input type="file" style="display: none;" onchange="setDataImage()" id="inputImage">
                             <div class="mb-5">
-                                <div class="dropzone dz-clickable dz-started">
-                                    <div class="dz-preview dz-processing dz-error dz-complete dz-image-preview">
-                                        <img class="dz-image" alt="trend-1.jpg"
-                                            src="https://static.wikia.nocookie.net/avatar/images/6/66/Ozai_versus_Avatar_Aang.png/revision/latest?cb=20120801065245">
-                                        <div class="dz-details">
-                                            <div class="dz-filename"><span data-dz-name="">trend-1.jpg</span><br/>
-                                                <span>Xóa</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="dz-preview dz-processing dz-error dz-complete dz-image-preview">
-                                        <img onclick="selectImage();" class="dz-image" alt="trend-1.jpg" style="border-radius: 15%; border: 1px solid black;"
-                                            src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg">
-                                    </div>
-                                    <input type="file" style="display: none;" id="inputImage">
+                                <div class="dropzone dz-clickable dz-started" id="imagePreview">
+        
+
                                 </div>
                             </div>
                         </div>
@@ -965,6 +966,55 @@
         onDataTest();
         function selectImage(){
             document.getElementById("inputImage").click();
+        }
+
+        async function setDataImage() {
+            const file = document.querySelector('#inputImage').files[0];
+            let data = await toBase64(file)
+            let divContainer = document.getElementById("imagePreview");
+            let id = uuid();
+            let preview = document.createElement('div');
+            preview.className = "dz-preview dz-processing dz-error dz-complete dz-image-preview " + id;
+            let img = document.createElement("img");
+            img.src = data;
+            img.className = "dz-image";
+            preview.appendChild(img);
+            let detail = document.createElement("div");
+            detail.className = "dz-details";
+            let dz = document.createElement("div");
+            dz.className = "dz-filename";
+            detail.appendChild(dz);
+            let name = document.createElement("span");
+            name.onclick = deleteImage.bind(this, id);
+            name.className = "dz-filename";
+            name.innerText = "Xóa";
+            dz.appendChild(name);
+            preview.appendChild(detail);
+            divContainer.appendChild(preview);
+            let out = document.getElementById("containerImageOut");
+            let dataInput = document.createElement("input");
+            dataInput.id = id;
+            dataInput.name = "fileImage";
+            dataInput.type = 'hidden';
+            dataInput.value = data;
+            out.appendChild(dataInput);
+        }
+
+        function submitImage(){
+            let inputI = document.getElementsByName("fileImage");
+            let arrI = [];
+            for(let i=0;i<inputI.length;i++){
+                arrI[i] = inputI[i].value;
+            }
+            alert(arrI.length + " ảnh")
+            // console.log(JSON.stringify(arrI))
+        }
+
+        function deleteImage(id){
+            console.log("delete " + id);
+            var deleteI = document.getElementsByClassName(id);
+            document.getElementById("containerImageOut").removeChild(document.getElementById(id))
+            document.getElementById("imagePreview").removeChild(deleteI[0])
         }
     </script>
     <script src="assets/js/jquery.min.js"></script>
