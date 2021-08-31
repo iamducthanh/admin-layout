@@ -54,6 +54,23 @@ function onTabTTKH(index){
     }
 }
 
+let tabNCC = document.getElementsByClassName("tabNCC");
+let headNCC = document.getElementsByClassName("menuTabNCC");
+for(let i = 1;i<tabNCC.length;i++){
+    tabNCC[i].style.display = 'none';
+}
+function onTabNCC(index){
+    for(let i = 0;i<tabNCC.length;i++){
+        if(i==index){
+            headNCC[i].style.borderBottom = '2px solid #564ab1'
+            tabNCC[i].style.display = 'unset';
+        } else {
+            headNCC[i].style.borderBottom = '0px'
+            tabNCC[i].style.display = 'none';
+        }
+    }
+}
+
 const toBase64 = file => new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
@@ -85,6 +102,18 @@ function closeModalAddKH(){
 }
 function onModalAddKH(){
     document.getElementById('tabAddKH').style.display = 'unset'
+}
+function closeModalAddNCC(){
+    document.getElementById('tabAddNCC').style.display = 'none'
+}
+function onModalAddNCC(){
+    document.getElementById('tabAddNCC').style.display = 'unset'
+}
+function closeModalNCC(){
+    document.getElementById('tabNCC').style.display = 'none'
+}
+function onModalNCC(){
+    document.getElementById('tabNCC').style.display = 'unset'
 }
 $(function(){
     $('*').keyup(function(e){

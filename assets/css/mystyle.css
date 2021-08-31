@@ -76,6 +76,9 @@
   .dd{
       display: block;
   }
+  .menuTabKH{
+      padding-bottom: 10px;
+  }
   .myInputNoBorder{
       border-top: none;
       border-left: none;
