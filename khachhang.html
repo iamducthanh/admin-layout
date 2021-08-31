@@ -12,238 +12,332 @@
     <link href="assets/css/sweetalert2.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
-    <link href="assets/css/mystyle.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dropzone.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <link href="assets/css/mystyle.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body data-topbar="colored" data-layout="horizontal">
+
     <div id="preloader">
         <div id="status">
             <div class="spinner"></div>
         </div>
     </div>
-    <div class="swal2-container swal2-center swal2-backdrop-show" id="modalAddHH"
-        style="overflow-y: auto; display: none;">
-        <div aria-labelledby="swal2-title" aria-describedby="swal2-content" id="thanh1"
-            class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive"
-            aria-modal="true" style="display: flex; width: 90%;">
-            <button type="button" class="swal2-close" onclick="closeModalAddHH();">×</button>
-            <h5>Thêm hàng hóa</h5>
-            <div class="row headAddHH" style="text-align: center;">
-                <div class="col-lg-2 menuTab" onclick="onTabAddHH(0);" id="menuTab1">Thông tin</div>
-                <div class="col-lg-2 menuTab" onclick="onTabAddHH(1);">Mô tả chi tiết</div>
-                <div class="col-lg-2 menuTab" onclick="onTabAddHH(2);">Thành phần</div>
-                <div class="col-lg-2 menuTab" onclick="onTabAddHH(3);">Thành phần</div>
-                <div class="col-lg-2 menuTab" onclick="onTabAddHH(4);">Thành phần</div>
-
+    <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto; display: none;"
+        id="tabTTKH">
+        <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show"
+            tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex; width: 80%;">
+            <button type="button" class="swal2-close" onclick="closeModalTTKH()">×</button>
+            <div class="row" style="text-align: center; margin-bottom: 20px;">
+                <div class="col-lg-2 menuTabKH" onclick="onTabTTKH(0);" id="menuTab1">
+                    Thông tin</div>
+                    <div class="col-lg-3 menuTabKH" onclick="onTabTTKH(1);">Lịch sử bán trả hàng
+                    </div>
+                <div class="col-lg-3 menuTabKH" onclick="onTabTTKH(2);">Nợ cần thu từ
+                    khách
+                </div>
             </div>
-            <div class="tabAddHH">
+            <div class="tabTTKH">
                 <div class="row">
-                    <div class="col-lg-7">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row mb-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Mã hàng</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="text" placeholder="Artisanal kale"
-                                            id="example-text-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-search-input" class="col-sm-2 col-form-label">Mã vạch</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="search" placeholder="How do I shoot web"
-                                            id="example-search-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-email-input" class="col-sm-3 col-form-label">Tên hàng</label>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="email" placeholder="bootstrap@example.com"
-                                            id="example-email-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-url-input" class="col-sm-3 col-form-label">Nhóm hàng</label>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="url" placeholder="https://getbootstrap.com"
-                                            id="example-url-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-tel-input" class="col-sm-3 col-form-label">Thường hiệu</label>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="tel" placeholder="1-(555)-555-5555"
-                                            id="example-tel-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-password-input" class="col-sm-2 col-form-label">Vị trí</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="password" placeholder="hunter2"
-                                            id="example-password-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-number-input" class="col-sm-2 col-form-label">Number</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="number" placeholder="42"
-                                            id="example-number-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-datetime-local-input" class="col-sm-2 col-form-label">Date and
-                                        time</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="datetime-local"
-                                            placeholder="2011-08-19T13:45:00" id="example-datetime-local-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-date-input" class="col-sm-2 col-form-label">Date</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="date" placeholder="2011-08-19"
-                                            id="example-date-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-month-input" class="col-sm-2 col-form-label">Month</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="month" placeholder="2011-08"
-                                            id="example-month-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-week-input" class="col-sm-2 col-form-label">Week</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="week" placeholder="2011-W33"
-                                            id="example-week-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-time-input" class="col-sm-2 col-form-label">Time</label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="time" placeholder="13:45:00"
-                                            id="example-time-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-color-input" class="col-sm-2 col-form-label">Color</label>
-                                    <div class="col-sm-10">
-                                        <input type="color" class="form-control form-control-color mw-100"
-                                            id="example-color-input" value="#655be6" title="Choose your color">
-                                    </div>
-                                </div>
-                                <div class=" row mb-3">
-                                    <label class="col-sm-2 col-form-label">Select</label>
-                                    <div class="col-sm-10">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-lg-3">
+                        <img style="width: 100%; margin-bottom: 30px;"
+                            src="https://th.bing.com/th/id/R.9635afcaa4e199c0980ecba1c9224535?rik=ehll7i3Ht4sB3w&pid=ImgRaw&r=0"
+                            alt="">
                     </div>
                     <div class="col-lg-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row mb-3">
-                                    <label for="example-email-input" class="col-sm-3 col-form-label">Giá vốn</label>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="email" placeholder="bootstrap@example.com"
-                                            id="example-email-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-url-input" class="col-sm-3 col-form-label">Giá bán</label>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="url" placeholder="https://getbootstrap.com"
-                                            id="example-url-input">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="example-tel-input" class="col-sm-3 col-form-label">Tồn kho</label>
-                                    <div class="col-sm-9">
-                                        <input class="form-control" type="tel" placeholder="1-(555)-555-5555"
-                                            id="example-tel-input">
-                                    </div>
-                                </div>
-                                <input type="checkbox"> Bán trực tiếp
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã khách
+                                hàng:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Mã khách hàng">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Tên khách
+                                hàng:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Tên khách hàng">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ngày
+                                sinh:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="date" placeholder="Ngày sinh">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Nhóm
+                                KH:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Nhóm KH">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã số
+                                thuế:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Mã số thuế">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Email:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input"
+                                class="col-sm-4 col-form-label font-size-14">Facebook:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Facebook">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Số điện
+                                thoại:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Số điện thoại">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Địa
+                                chỉ:</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control myInputNoBorder" name="" id="" cols="30"
+                                    rows="3">Địa chỉ</textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Khu vực
+                                giao:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Khu vực giao">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Phường
+                                xã:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Phường xã">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Người
+                                tạo</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Người tạo">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ngày
+                                tạo:</label>
+                            <div class="col-sm-8">
+                                <input class="form-control myInputNoBorder" type="date" placeholder="Ngày tạo">
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-9">
-                                    <h4 class="card-title">Ảnh sản phẩm</h4>
-                                </div>
-                                <div class="col-lg-3" style="text-align: right;">
-                                    <button class="btn btn-primary" style="margin-bottom: 10px;" onclick="selectImage()">Thêm ảnh sản phẩm</button>
-                                    <button class="btn btn-primary" onclick="submitImage()">Test Submit</button>
-                                </div>
-                               
-                            </div>
-                            <div id="containerImageOut">
-                                
-                            </div>
-                            <input type="file" style="display: none;" onchange="setDataImage()" id="inputImage">
-                            <div class="mb-5">
-                                <div class="dropzone dz-clickable dz-started" id="imagePreview">
-        
-
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-9">
+                        <textarea class="form-control" style="width: 100%;" id="" cols="30" rows="5">Ghi chú</textarea>
                     </div>
                 </div>
-                <div class="row" style="margin: 0 20px;">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Thuộc tính</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <br />
-                <div class="row" style="margin: 0 20px;">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Đơn vị</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                <div class="footerAddHH" style="text-align: right;">
+                    <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
+                            class="fas fa-user-check"></i>&ensp; Cập
+                        nhật</button>
+                    <button class="btn btn-primary" style="background-color: #db4e65; border: none;"><i
+                            class="fas fa-user-lock"></i>&ensp; Ngừng hoạt
+                        động</button>
+                    <button class="btn btn-primary" style="background-color: #db4e65; border: none;"><i
+                            class="fas fa-user-slash"></i>&ensp; Xóa</button>
                 </div>
             </div>
-            <div class="tabAddHH">
-                Tab mô tả chi tiết
+            <div class="tabTTKH">
+                <table class="table table-striped table-bordered dt-responsive nowrap"
+                    style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Mã hóa đơn</th>
+                            <th>Thời gian</th>
+                            <th>Người bán</th>
+                            <th>Tổng cộng</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="footerAddHH" style="text-align: right;">
+                    <button class="btn btn-primary" style="background-color: #656565; border: none;"><i
+                            class="fas fa-file-export"></i>&ensp; Xuất file</button>
+                </div>
             </div>
-            <div class="tabAddHH">
-                Tab thành phần
-            </div>
-            <div class="tabAddHH">
-                Tab thành phần 2
-            </div>
-            <div class="tabAddHH">
-                Tab thành phần3
-            </div>
-
-            <div class="footerAddHH">
-                <button class="btn btn-primary">Nút lưu 1</button>
-                <button class="btn btn-primary">Nút lưu 2</button>
-                <button class="btn btn-primary">Nút lưu 3</button>
+            <div class="tabTTKH">
+                <table class="table table-striped table-bordered dt-responsive nowrap"
+                    style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Mã phiếu</th>
+                            <th>Thời gian</th>
+                            <th>Loại</th>
+                            <th>Giá trị</th>
+                            <th>Dư nợ khách hàng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tiger Nixon</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="footerAddHH" style="text-align: right;">
+                    <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
+                            class="fas fa-cog"></i>&ensp; Điều chỉnh</button>
+                    <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
+                            class="fas fa-calculator"></i>&ensp; Thanh toán</button>
+                    <button class="btn btn-primary" style="background-color: #656565; border: none;"><i
+                            class="fas fa-file-export"></i>&ensp; Xuất file công nợ</button>
+                    <button class="btn btn-primary" style="background-color: #656565; border: none;"><i
+                            class="fas fa-file-export"></i>&ensp; Xuất file</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto; display: none;"
+    id="tabAddKH">
+    <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show"
+        tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex; width: 90%;">
+        <button type="button" class="swal2-close" onclick="closeModalAddKH()">×</button>
+            <div class="head">
+                <h5>Thêm khách hàng</h5>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <img width="100%" src="https://th.bing.com/th/id/R.9635afcaa4e199c0980ecba1c9224535?rik=ehll7i3Ht4sB3w&pid=ImgRaw&r=0" alt="">
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã khách hàng:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Mã khách hàng">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Tên khách hàng:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Tên khách hàng">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Điện thoại:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Điện thoại">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ngày sinh:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="date" placeholder="Ngày sinh">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Giới tính:</label>
+                        <div class="col-sm-8">
+                            <input class="form-check-input" type="radio" checked name="gioiTinh"> <p class="font-size-14" style="display: inline;">Nam</p> &ensp;
+                            <input class="form-check-input" type="radio" name="gioiTinh"> <p class="font-size-14" style="display: inline;">Nữ</p>
+                        
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Địa chỉ:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Địa chỉ">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Khu vực:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Khu vực">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Phường xã:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Phường xã">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Loại khách:</label>
+                        <div class="col-sm-8">
+                            <input class="form-check-input" type="radio" checked name="type"> <p class="font-size-14" style="display: inline;">Cá nhân</p> &ensp;
+                            <input class="form-check-input" type="radio" name="type"> <p class="font-size-14" style="display: inline;">Công ty</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã số thuế:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Mã số thuế">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Email:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Facebook:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Facebook">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Nhóm:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Nhóm">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ghi chú:</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control myInputNoBorder" name="" id="" cols="30" rows="5">Ghi chú</textarea>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="footerAddHH" style="text-align: right;">
+                <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
+                        class="fas fa-user-check"></i>&ensp; Lưu</button>
+                <button class="btn btn-primary" style="background-color: #656565; border: none;" onclick="closeModalAddKH()"><i
+                        class="fas fa-ban"></i>&ensp; Bỏ qua</button>
+            </div>
+    </div>
+</div>
 
     <div id="layout-wrapper">
         <header id="page-topbar">
@@ -498,42 +592,10 @@
                                             <div class="row">
                                                 <div class="col-lg-4">
                                                     <div>
-                                                        <a href="ui-alerts.html" class="dropdown-item">Alerts</a>
-                                                        <a href="ui-badge.html" class="dropdown-item">Badge</a>
-                                                        <a href="ui-buttons.html" class="dropdown-item">Buttons</a>
-                                                        <a href="ui-cards.html" class="dropdown-item">Cards</a>
-                                                        <a href="ui-dropdowns.html" class="dropdown-item">Dropdowns</a>
-                                                        <a href="ui-navs.html" class="dropdown-item">Navs</a>
+                                                        <a href="hanghoa.html" class="dropdown-item">Hàng hóa</a>
+                                    
                                                     </div>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <div>
-                                                        <a href="ui-tabs-accordions.html" class="dropdown-item">Tabs
-                                                            &amp; Accordions</a>
-                                                        <a href="ui-modals.html" class="dropdown-item">Modals</a>
-                                                        <a href="ui-images.html" class="dropdown-item">Images</a>
-                                                        <a href="ui-progressbars.html" class="dropdown-item">Progress
-                                                            Bars</a>
-                                                        <a href="ui-lightbox.html" class="dropdown-item">Lightbox</a>
-                                                        <a href="ui-pagination.html"
-                                                            class="dropdown-item">Pagination</a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-4">
-                                                    <div>
-                                                        <a href="ui-popover-tooltips.html" class="dropdown-item">Popover
-                                                            &amp; Tooltips</a>
-                                                        <a href="ui-carousel.html" class="dropdown-item">Carousel</a>
-                                                        <a href="ui-video.html" class="dropdown-item">Video</a>
-                                                        <a href="ui-typography.html"
-                                                            class="dropdown-item">Typography</a>
-                                                        <a href="ui-sweet-alert.html"
-                                                            class="dropdown-item">Sweet-Alert</a>
-                                                        <a href="ui-grid.html" class="dropdown-item">Grid</a>
-                                                    </div>
-                                                </div>
-
+                                                </div>   
                                             </div>
 
                                         </div>
@@ -649,18 +711,12 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-advanced-ui"
                                             role="button">
-                                            <i class="dripicons-archive me-2"></i>Advanced UI
+                                            <i class="far fa-user"></i>&ensp;Đối tác
                                             <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-advanced-ui">
-                                            <a href="advanced-animation.html" class="dropdown-item">Animation</a>
-                                            <a href="advanced-highlight.html" class="dropdown-item">Highlight</a>
-                                            <a href="advanced-rating.html" class="dropdown-item">Rating</a>
-                                            <a href="advanced-nestable.html" class="dropdown-item">Nestable</a>
-                                            <a href="advanced-alertify.html" class="dropdown-item">Alertify</a>
-                                            <a href="advanced-rangeslider.html" class="dropdown-item">Range Slider</a>
-                                            <a href="advanced-sessiontimeout.html" class="dropdown-item">Session
-                                                Timeout</a>
+                                            <a href="khachhang.html" class="dropdown-item">Khách hàng</a>
+                            
                                         </div>
                                     </li>
 
@@ -748,32 +804,132 @@
             <div class="page-content">
                 <div class="myContainer">
                     <div class="row container1">
-                        <div class="col-lg-2 h-100" id="leftHH">
+                        <div class="col-lg-3 h-100" id="leftKH">
                             <div class="card" id="formLeft">
                                 <div class="h-100 w-100">
                                     <div id="sidebar-menu">
                                         <ul class="list-unstyled" id="side-menu">
                                             <li>
                                                 <a class="has-arrow waves-effect">
-                                                    <span> Loại hàng </span>
+                                                    <span> Nhóm khách hàng </span>
                                                 </a>
-                                                <ul class="sub-menu">
-                                                    <li><a class="locItem" style="padding-left: 10%;"><input
-                                                                type="checkbox" /> Hàng hóa</a></li>
-                                                    <li><a class="locItem" style="padding-left: 10%;"><input
-                                                                type="checkbox" /> Dịch vụ</a></li>
-                                                    <li><a class="locItem" style="padding-left: 10%;"><input
-                                                                type="checkbox" /> Combo - Đóng gói</a></li>
+                                                <ul class="sub-menu" style="padding: 0 10px 0 20px;">
+                                                    <div class="row">
+                                                        <div class="col-lg-10">
+                                                            <select class="form-select myInputNoBorder">
+                                                                <option selected>Chọn nhóm khách hàng</option>
+                                                                <option value="1">Thêm nhóm</option>
+                                                                <option value="2">Nhóm 1</option>
+                                                                <option value="3">Nhóm 2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <i class="fas fa-edit"></i>
+                                                        </div>
+                                                    </div>
                                                 </ul>
                                             </li>
                                             <li>
                                                 <a class="has-arrow waves-effect">
-                                                    <span> Lọc gì đó </span>
+                                                    <span>Ngày tạo </span>
                                                 </a>
-                                                <ul class="sub-menu">
-                                                    <li><a><input type="checkbox" /> Hàng hóa</a></li>
-                                                    <li><a><input type="checkbox" /> Dịch vụ</a></li>
-                                                    <li><a><input type="checkbox" /> Combo - Đóng gói</a></li>
+                                                <ul class="sub-menu" style="padding: 0 10px 0 30px;">
+                                                    <div class="row">
+                                                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Bắt đầu:</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control myInputNoBorder" type="date" placeholder="Ngày sinh">
+                                                        </div>
+                                                    </div>  
+                                                    <div class="row">
+                                                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Kết thúc:</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control myInputNoBorder" type="date" placeholder="Ngày sinh">
+                                                        </div>
+                                                    </div>  
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="has-arrow waves-effect">
+                                                    <span>Người tạo </span>
+                                                </a>
+                                                <ul class="sub-menu" style="padding: 0 10px 0 30px;">
+                                                    <select class="form-select myInputNoBorder">
+                                                        <option selected>Chọn người tạo</option>
+                                                        <option value="2">Người 1</option>
+                                                        <option value="3">Người 2</option>
+                                                    </select>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="has-arrow waves-effect">
+                                                    <span>Tổng bán </span>
+                                                </a>
+                                                <ul class="sub-menu" style="padding: 0 10px 0 30px;">
+                                                    <div class="row">
+                                                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Từ:</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control myInputNoBorder" type="number" value="0">
+                                                        </div>
+                                                    </div>  
+                                                    <div class="row">
+                                                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Tới:</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control myInputNoBorder" type="number">
+                                                        </div>
+                                                    </div>  
+                                                    <div class="row">
+                                                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Bắt đầu:</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control myInputNoBorder" type="date" placeholder="Ngày sinh">
+                                                        </div>
+                                                    </div>  
+                                                    <div class="row">
+                                                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Kết thúc:</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control myInputNoBorder" type="date" placeholder="Ngày sinh">
+                                                        </div>
+                                                    </div> 
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="has-arrow waves-effect">
+                                                    <span>Nợ hiện tại </span>
+                                                </a>
+                                                <ul class="sub-menu" style="padding: 0 10px 0 30px;">
+                                                    <div class="row">
+                                                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Từ:</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control myInputNoBorder" type="number" value="0">
+                                                        </div>
+                                                    </div>  
+                                                    <div class="row">
+                                                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Tới:</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control myInputNoBorder" type="number">
+                                                        </div>
+                                                    </div>  
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="has-arrow waves-effect">
+                                                    <span>Loại khách hàng </span>
+                                                </a>
+                                                <ul class="sub-menu" style="padding: 0 10px 0 30px;">
+                                                        <input class="form-check-input" style="margin-bottom: 10px;" type="radio" checked name="typeKH">&ensp; Tất cả <br/>
+                                                        <input class="form-check-input" style="margin-bottom: 10px;" type="radio" name="typeKH">&ensp; Công ty<br/>
+                                                        <input class="form-check-input" style="margin-bottom: 10px;" type="radio" name="typeKH">&ensp; Cá nhân<br/>
+                                                        
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="has-arrow waves-effect">
+                                                    <span>Giới tính </span>
+                                                </a>
+                                                <ul class="sub-menu" style="padding: 0 10px 0 30px;">
+                                                        <input class="form-check-input" style="margin-bottom: 10px;" type="radio" checked name="typeKH">&ensp; Tất cả <br/>
+                                                        <input class="form-check-input" style="margin-bottom: 10px;" type="radio" name="typeKH">&ensp; Nam<br/>
+                                                        <input class="form-check-input" style="margin-bottom: 10px;" type="radio" name="typeKH">&ensp; Nữ<br/>
+                                                        
                                                 </ul>
                                             </li>
                                         </ul>
@@ -786,77 +942,116 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-10" id="rightHH">
+                        <div class="col-lg-9" id="rightKH">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <h1 class="header-title mb-4"><i class="mdi mdi-menu"
-                                                    style="font-size: 16pt;" onclick="editMenu();"></i> &ensp;Danh sách
-                                                hàng hóa</h1>
+                                                    style="font-size: 16pt;" onclick="editMenuKH();"></i> &ensp;Danh sách
+                                                khách hàng</h1>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="dropdown myDropdown myBtn">
                                                 <button class="btn btn-primary" id="dropdownMenuButton"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Lọc <i class="mdi mdi-chevron-down"></i>
+                                                    <i class="fas fa-filter"></i>
+                                                    <i class="mdi mdi-chevron-down"></i>
                                                 </button>
-                                                <div class="dropdown-menu dropdown-menu-end" style="width: 400%;">
+                                                <div class="dropdown-menu dropdown-menu-end" style="width: 650%;">
                                                     <div class="row">
                                                         <div class="col-lg-6">
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 1
+                                                                <input class="form-check-input" type="checkbox"> Mã
+                                                                khách hàng
                                                             </div>
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 2
+                                                                <input class="form-check-input" type="checkbox"> Tên
+                                                                khách hàng
                                                             </div>
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 3
+                                                                <input class="form-check-input" type="checkbox"> Loại
+                                                                khách
                                                             </div>
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 4
+                                                                <input class="form-check-input" type="checkbox"> Điện
+                                                                thoại
                                                             </div>
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 5
+                                                                <input class="form-check-input" type="checkbox"> Nhóm
+                                                                khách hàng
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Giới
+                                                                tính
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Ngày
+                                                                sinh
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Email
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox">
+                                                                Facebook
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Công ty
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Mã số
+                                                                thuế
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6">
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 1
+                                                                <input class="form-check-input" type="checkbox"> Địa chỉ
                                                             </div>
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 2
+                                                                <input class="form-check-input" type="checkbox"> Khu vực
+                                                                giao hàng
                                                             </div>
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 3
+                                                                <input class="form-check-input" type="checkbox">
+                                                                Phường/Xã
                                                             </div>
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 4
+                                                                <input class="form-check-input" type="checkbox"> Người
+                                                                tạo
                                                             </div>
                                                             <div class="loc">
-                                                                <input type="checkbox"> Lọc 5
+                                                                <input class="form-check-input" type="checkbox"> Ngày
+                                                                tạo
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Ghi chú
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Ngày
+                                                                giao dịch chuỗi
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Nợ hiện
+                                                                tại
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Tổng
+                                                                bán
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Tổng
+                                                                bán trừ hàng
+                                                            </div>
+                                                            <div class="loc">
+                                                                <input class="form-check-input" type="checkbox"> Trạng
+                                                                thái
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-primary myBtn">Import</button>
-                                            <button class="btn btn-primary myBtn">Xuât file</button>
-                                            <div class="dropdown myDropdown">
-                                                <button class="btn btn-primary" id="dropdownMenuButton"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    + Thêm mới <i class="mdi mdi-chevron-down"></i>
-                                                </button>
-                                                <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" href="#" onclick="onModalAddHH();">Thêm
-                                                        hàng hóa</a>
-                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Separated link</a>
-                                                </div>
-                                            </div>
+                                            <button class="btn btn-primary myBtn" onclick="onModalAddKH()"><b>+</b></button>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -868,22 +1063,27 @@
                                                         style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                         <thead>
                                                             <tr>
-                                                                <th>Name</th>
-                                                                <th>Position</th>
-                                                                <th>Office</th>
-                                                                <th>Age</th>
-                                                                <th>Start date</th>
-                                                                <th>Salary</th>
+                                                                <th><input class="form-check-input" type="checkbox">
+                                                                </th>
+                                                                <th>Mã khác hàng</th>
+                                                                <th>Tên khách hàng</th>
+                                                                <th>Điện thoại</th>
+                                                                <th>Nợ hiện tại</th>
+                                                                <th>Tổng bán</th>
+                                                                <th>Tổng bán trừ trả hàng</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody id="dataTest">
-                                                            <tr>
+                                                            <tr onclick="onModalTTKH()">
+                                                                <td><input class="form-check-input" type="checkbox">
+                                                                </td>
                                                                 <td>Tiger Nixon</td>
                                                                 <td>System Architect</td>
                                                                 <td>Edinburgh</td>
                                                                 <td>61</td>
                                                                 <td>2011/04/25</td>
                                                                 <td>$320,800</td>
+
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -948,75 +1148,6 @@
 
     <div class="rightbar-overlay"></div>
 
-    <script>
-        function onDataTest() {
-            let tb = document.querySelector("#dataTest");
-            for (let i = 1; i < 201; i++) {
-                tb.innerHTML +=
-                    "<tr>" +
-                    "<td>Name " + i + "</td>" +
-                    "<td>Position " + i + "</td>" +
-                    "<td>Office " + i + "</td>" +
-                    "<td>Age " + i + "</td>" +
-                    "<td>Start date " + i + "</td>" +
-                    "<td>Salary " + i + "</td>" +
-                    "</tr>";
-            }
-        }
-        onDataTest();
-        function selectImage(){
-            document.getElementById("inputImage").click();
-        }
-
-        async function setDataImage() {
-            const file = document.querySelector('#inputImage').files[0];
-            let data = await toBase64(file)
-            let divContainer = document.getElementById("imagePreview");
-            let id = uuid();
-            let preview = document.createElement('div');
-            preview.className = "dz-preview dz-processing dz-error dz-complete dz-image-preview " + id;
-            let img = document.createElement("img");
-            img.src = data;
-            img.className = "dz-image";
-            preview.appendChild(img);
-            let detail = document.createElement("div");
-            detail.className = "dz-details";
-            let dz = document.createElement("div");
-            dz.className = "dz-filename";
-            detail.appendChild(dz);
-            let name = document.createElement("span");
-            name.onclick = deleteImage.bind(this, id);
-            name.className = "dz-filename";
-            name.innerText = "Xóa";
-            dz.appendChild(name);
-            preview.appendChild(detail);
-            divContainer.appendChild(preview);
-            let out = document.getElementById("containerImageOut");
-            let dataInput = document.createElement("input");
-            dataInput.id = id;
-            dataInput.name = "fileImage";
-            dataInput.type = 'hidden';
-            dataInput.value = data;
-            out.appendChild(dataInput);
-        }
-
-        function submitImage(){
-            let inputI = document.getElementsByName("fileImage");
-            let arrI = [];
-            for(let i=0;i<inputI.length;i++){
-                arrI[i] = inputI[i].value;
-            }
-            alert(arrI.length + " ảnh")
-            // console.log(JSON.stringify(arrI))
-        }
-
-        function deleteImage(id){
-            console.log("delete " + id);
-            var deleteI = document.getElementsByClassName(id);
-            document.getElementById("containerImageOut").removeChild(document.getElementById(id))
-            document.getElementById("imagePreview").removeChild(deleteI[0])
-        }
-    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/metisMenu.min.js"></script>
@@ -1028,6 +1159,8 @@
     <script src="assets/js/dashboard.init.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/myjs.js"></script>
+
+
     <!-- Required datatable js -->
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/dataTables.bootstrap4.min.js"></script>
@@ -1043,6 +1176,7 @@
     <script src="assets/js/buttons.colVis.min.js"></script>
 
     <script src="assets/js/datatables.init.js"></script>
+
     <script src="assets/js/dropzone.min.js"></script>
 
 </body>

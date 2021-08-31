@@ -9,9 +9,19 @@ function editMenu(){
         right.className = 'col-lg-12';
     }
 }
+function editMenuKH(){
+    let left = document.getElementById("leftKH");
+    let right = document.getElementById("rightKH");
+    if(left.style.display == 'none'){
+        left.style.display = 'unset';
+        right.className = 'col-lg-9';
+    } else {
+        left.style.display = 'none';
+        right.className = 'col-lg-12';
+    }
+}
 let tabAddHH = document.getElementsByClassName("tabAddHH");
 let headAddHH = document.getElementsByClassName("menuTab");
-console.log(tabAddHH);
 for(let i = 1;i<tabAddHH.length;i++){
     tabAddHH[i].style.display = 'none';
 }
@@ -23,6 +33,23 @@ function onTabAddHH(index){
         } else {
             headAddHH[i].style.borderBottom = '0px'
             tabAddHH[i].style.display = 'none';
+        }
+    }
+}
+
+let tabTTKH = document.getElementsByClassName("tabTTKH");
+let headTTKH = document.getElementsByClassName("menuTabKH");
+for(let i = 1;i<tabTTKH.length;i++){
+    tabTTKH[i].style.display = 'none';
+}
+function onTabTTKH(index){
+    for(let i = 0;i<tabTTKH.length;i++){
+        if(i==index){
+            headTTKH[i].style.borderBottom = '2px solid #564ab1'
+            tabTTKH[i].style.display = 'unset';
+        } else {
+            headTTKH[i].style.borderBottom = '0px'
+            tabTTKH[i].style.display = 'none';
         }
     }
 }
@@ -47,6 +74,18 @@ function closeModalAddHH(){
 function onModalAddHH(){
     document.getElementById('modalAddHH').style.display = 'unset'
 }
+function closeModalTTKH(){
+    document.getElementById('tabTTKH').style.display = 'none'
+}
+function onModalTTKH(){
+    document.getElementById('tabTTKH').style.display = 'unset'
+}
+function closeModalAddKH(){
+    document.getElementById('tabAddKH').style.display = 'none'
+}
+function onModalAddKH(){
+    document.getElementById('tabAddKH').style.display = 'unset'
+}
 $(function(){
     $('*').keyup(function(e){
         if(e.keyCode=='27'){
@@ -55,3 +94,4 @@ $(function(){
     })
   })
 document.getElementById("rightHH").className = 'col-lg-10';
+

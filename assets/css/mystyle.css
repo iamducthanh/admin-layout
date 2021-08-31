@@ -76,3 +76,9 @@
   .dd{
       display: block;
   }
+  .myInputNoBorder{
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      margin-bottom: 10px;
+  }
