@@ -138,6 +138,12 @@ function closeModalDTGH(){
 function onModalDTGH(){
     document.getElementById('tabDTGH').style.display = 'unset'
 }
+function closeModalAddDTGH(){
+    document.getElementById('tabAddDTGH').style.display = 'none'
+}
+function onModalAddDTGH(){
+    document.getElementById('tabAddDTGH').style.display = 'unset'
+}
 
 $(function(){
     $('*').keyup(function(e){

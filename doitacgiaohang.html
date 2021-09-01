@@ -28,7 +28,7 @@
     </div>
     <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto; display: none;"
         id="tabDTGH">
-        <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show"
+        <div aria-labelledby="swal2-title" id="thanh1" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show"
             tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex; width: 80%;">
             <button type="button" class="swal2-close" onclick="closeModalDTGH()">×</button>
             <div class="row" style="text-align: center; margin-bottom: 20px;">
@@ -174,29 +174,34 @@
     </div>
 
     <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto; display: none;"
-    id="tabAddKH">
-    <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show"
-        tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex; width: 90%;">
-        <button type="button" class="swal2-close" onclick="closeModalAddKH()">×</button>
+    id="tabAddDTGH">
+    <div aria-labelledby="swal2-title" id="thanh1" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show"
+        tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex; width: 70%;">
+        <button type="button" class="swal2-close" onclick="closeModalAddDTGH()">×</button>
             <div class="head">
-                <h5>Thêm khách hàng</h5>
+                <h5>Thêm đối tác giao hàng</h5>
                 
             </div>
             <div class="row">
-                <div class="col-lg-2">
-                    <img width="100%" src="https://th.bing.com/th/id/R.9635afcaa4e199c0980ecba1c9224535?rik=ehll7i3Ht4sB3w&pid=ImgRaw&r=0" alt="">
-                </div>
-                <div class="col-lg-5">
+              
+                <div class="col-lg-6">
                     <div class="row">
-                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã khách hàng:</label>
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Loại đối tác:</label>
                         <div class="col-sm-8">
-                            <input class="form-control myInputNoBorder" type="text" placeholder="Mã khách hàng">
+                            <input class="form-check-input myInputNoBorder" type="radio" checked name="type"> <p class="font-size-14" style="display: inline;">Cá nhân</p> &ensp;
+                            <input class="form-check-input myInputNoBorder" type="radio" name="type"> <p class="font-size-14" style="display: inline;">Công ty</p>
                         </div>
                     </div>
                     <div class="row">
-                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Tên khách hàng:</label>
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã đối tác:</label>
                         <div class="col-sm-8">
-                            <input class="form-control myInputNoBorder" type="text" placeholder="Tên khách hàng">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Mã đối tác">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Tên đối tác:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Tên đối tác">
                         </div>
                     </div>
                     <div class="row">
@@ -206,24 +211,25 @@
                         </div>
                     </div>
                     <div class="row">
-                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ngày sinh:</label>
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Email:</label>
                         <div class="col-sm-8">
-                            <input class="form-control myInputNoBorder" type="date" placeholder="Ngày sinh">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Email">
                             
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-6">
+             
                     <div class="row">
-                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Giới tính:</label>
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Nhóm đối tác:</label>
                         <div class="col-sm-8">
-                            <input class="form-check-input" type="radio" checked name="gioiTinh"> <p class="font-size-14" style="display: inline;">Nam</p> &ensp;
-                            <input class="form-check-input" type="radio" name="gioiTinh"> <p class="font-size-14" style="display: inline;">Nữ</p>
-                        
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Nhóm đối tác">
                         </div>
                     </div>
                     <div class="row">
                         <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Địa chỉ:</label>
                         <div class="col-sm-8">
-                            <input class="form-control myInputNoBorder" type="text" placeholder="Địa chỉ">
+                            <textarea class="form-control myInputNoBorder" name="" id="" cols="30" rows="3">Địa chỉ</textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -238,43 +244,10 @@
                             <input class="form-control myInputNoBorder" type="text" placeholder="Phường xã">
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="row">
-                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Loại khách:</label>
-                        <div class="col-sm-8">
-                            <input class="form-check-input" type="radio" checked name="type"> <p class="font-size-14" style="display: inline;">Cá nhân</p> &ensp;
-                            <input class="form-check-input" type="radio" name="type"> <p class="font-size-14" style="display: inline;">Công ty</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã số thuế:</label>
-                        <div class="col-sm-8">
-                            <input class="form-control myInputNoBorder" type="text" placeholder="Mã số thuế">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Email:</label>
-                        <div class="col-sm-8">
-                            <input class="form-control myInputNoBorder" type="text" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Facebook:</label>
-                        <div class="col-sm-8">
-                            <input class="form-control myInputNoBorder" type="text" placeholder="Facebook">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Nhóm:</label>
-                        <div class="col-sm-8">
-                            <input class="form-control myInputNoBorder" type="text" placeholder="Nhóm">
-                        </div>
-                    </div>
                     <div class="row">
                         <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ghi chú:</label>
                         <div class="col-sm-8">
-                            <textarea class="form-control myInputNoBorder" name="" id="" cols="30" rows="5">Ghi chú</textarea>
+                            <textarea class="form-control myInputNoBorder" name="" id="" cols="30" rows="3">Ghi chú</textarea>
                         </div>
                     </div>
                 </div>
@@ -283,7 +256,7 @@
             <div class="footerAddHH" style="text-align: right;">
                 <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
                         class="fas fa-user-check"></i>&ensp; Lưu</button>
-                <button class="btn btn-primary" style="background-color: #656565; border: none;" onclick="closeModalAddKH()"><i
+                <button class="btn btn-primary" style="background-color: #656565; border: none;" onclick="closeModalAddDTGH()"><i
                         class="fas fa-ban"></i>&ensp; Bỏ qua</button>
             </div>
     </div>
@@ -909,7 +882,7 @@
                                             </div>
                                             <button class="btn btn-primary myBtn"><i class="fas fa-file-export"></i> Export</button>
                                             <button class="btn btn-primary myBtn"><i class="fas fa-file-import"></i> Import</button>
-                                            <button class="btn btn-primary myBtn" onclick="onModalAddKH()"><b>+ Thêm đối tác</b></button>
+                                            <button class="btn btn-primary myBtn" onclick="onModalAddDTGH()"><b>+ Thêm đối tác</b></button>
                                         </div>
                                     </div>
                                     <div class="row">
