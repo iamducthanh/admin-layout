@@ -76,7 +76,7 @@
   .dd{
       display: block;
   }
-  .menuTabKH{
+  .menuTabKH, .menuTabDTGH, .menuTabNCC{
       padding-bottom: 10px;
   }
   .myInputNoBorder{

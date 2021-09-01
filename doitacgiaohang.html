@@ -27,126 +27,74 @@
         </div>
     </div>
     <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto; display: none;"
-        id="tabTTKH">
+        id="tabDTGH">
         <div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show"
             tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex; width: 80%;">
-            <button type="button" class="swal2-close" onclick="closeModalTTKH()">×</button>
+            <button type="button" class="swal2-close" onclick="closeModalDTGH()">×</button>
             <div class="row" style="text-align: center; margin-bottom: 20px;">
-                <div class="col-lg-2 menuTabKH" onclick="onTabTTKH(0);" id="menuTab1">
+                <div class="col-lg-2 menuTabDTGH" onclick="onTabDTGH(0);" id="menuTab1">
                     Thông tin</div>
-                    <div class="col-lg-3 menuTabKH" onclick="onTabTTKH(1);">Lịch sử bán trả hàng
+                    <div class="col-lg-3 menuTabDTGH" onclick="onTabDTGH(1);">Lịch sử giao hàng
                     </div>
-                <div class="col-lg-3 menuTabKH" onclick="onTabTTKH(2);">Nợ cần thu từ
-                    khách
+                <div class="col-lg-3 menuTabDTGH" onclick="onTabDTGH(2);">Phí cần trả đối tác giao hàng
                 </div>
             </div>
-            <div class="tabTTKH">
+            <div class="tabDTGH">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <img style="width: 100%; margin-bottom: 30px;"
-                            src="https://th.bing.com/th/id/R.9635afcaa4e199c0980ecba1c9224535?rik=ehll7i3Ht4sB3w&pid=ImgRaw&r=0"
-                            alt="">
-                    </div>
-                    <div class="col-lg-5">
+              
+                    <div class="col-lg-12">
                         <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã khách
-                                hàng:</label>
-                            <div class="col-sm-8">
+                            <label for="example-text-input" class="col-sm-2 col-form-label font-size-14">Mã đối tác:</label>
+                            <div class="col-sm-10">
                                 <input class="form-control myInputNoBorder" type="text" placeholder="Mã khách hàng">
                             </div>
                         </div>
                         <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Tên khách
-                                hàng:</label>
-                            <div class="col-sm-8">
+                            <label for="example-text-input" class="col-sm-2 col-form-label font-size-14">Tên đối tác:</label>
+                            <div class="col-sm-10">
                                 <input class="form-control myInputNoBorder" type="text" placeholder="Tên khách hàng">
                             </div>
                         </div>
                         <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ngày
-                                sinh:</label>
-                            <div class="col-sm-8">
-                                <input class="form-control myInputNoBorder" type="date" placeholder="Ngày sinh">
+                            <label for="example-text-input" class="col-sm-2 col-form-label font-size-14">Điện thoại:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Ngày sinh">
                             </div>
                         </div>
                         <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Nhóm
-                                KH:</label>
-                            <div class="col-sm-8">
-                                <input class="form-control myInputNoBorder" type="text" placeholder="Nhóm KH">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã số
-                                thuế:</label>
-                            <div class="col-sm-8">
-                                <input class="form-control myInputNoBorder" type="text" placeholder="Mã số thuế">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Email:</label>
-                            <div class="col-sm-8">
+                            <label for="example-text-input" class="col-sm-2 col-form-label font-size-14">Email:</label>
+                            <div class="col-sm-10">
                                 <input class="form-control myInputNoBorder" type="text" placeholder="Email">
                             </div>
                         </div>
                         <div class="row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label font-size-14">Địa chỉ:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Nhóm KH">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input" class="col-sm-2 col-form-label font-size-14">Khu vực giao:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Mã số thuế">
+                            </div>
+                        </div>
+                   
+                        <div class="row">
                             <label for="example-text-input"
-                                class="col-sm-4 col-form-label font-size-14">Facebook:</label>
-                            <div class="col-sm-8">
+                                class="col-sm-2 col-form-label font-size-14">Phường xã:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control myInputNoBorder" type="text" placeholder="Facebook">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="example-text-input"
+                                class="col-sm-2 col-form-label font-size-14">Nhóm đối tác:</label>
+                            <div class="col-sm-10">
                                 <input class="form-control myInputNoBorder" type="text" placeholder="Facebook">
                             </div>
                         </div>
 
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Số điện
-                                thoại:</label>
-                            <div class="col-sm-8">
-                                <input class="form-control myInputNoBorder" type="text" placeholder="Số điện thoại">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Địa
-                                chỉ:</label>
-                            <div class="col-sm-8">
-                                <textarea class="form-control myInputNoBorder" name="" id="" cols="30"
-                                    rows="3">Địa chỉ</textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Khu vực
-                                giao:</label>
-                            <div class="col-sm-8">
-                                <input class="form-control myInputNoBorder" type="text" placeholder="Khu vực giao">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Phường
-                                xã:</label>
-                            <div class="col-sm-8">
-                                <input class="form-control myInputNoBorder" type="text" placeholder="Phường xã">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Người
-                                tạo</label>
-                            <div class="col-sm-8">
-                                <input class="form-control myInputNoBorder" type="text" placeholder="Người tạo">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ngày
-                                tạo:</label>
-                            <div class="col-sm-8">
-                                <input class="form-control myInputNoBorder" type="date" placeholder="Ngày tạo">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-9">
-                        <textarea class="form-control" style="width: 100%;" id="" cols="30" rows="5">Ghi chú</textarea>
                     </div>
                 </div>
                 <div class="footerAddHH" style="text-align: right;">
@@ -160,15 +108,17 @@
                             class="fas fa-user-slash"></i>&ensp; Xóa</button>
                 </div>
             </div>
-            <div class="tabTTKH">
+            <div class="tabDTGH">
                 <table class="table table-striped table-bordered dt-responsive nowrap"
                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
                         <tr>
                             <th>Mã hóa đơn</th>
+                            <th>Mã vận đơn</th>
                             <th>Thời gian</th>
-                            <th>Người bán</th>
-                            <th>Tổng cộng</th>
+                            <th>Giá trị hoạt động</th>
+                            <th>Còn cần thu (COD)</th>
+                            <th>Phí trả ĐTGH</th>
                             <th>Trạng thái</th>
                         </tr>
                     </thead>
@@ -183,11 +133,15 @@
                     </tbody>
                 </table>
                 <div class="footerAddHH" style="text-align: right;">
+                    <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
+                            class="fas fa-dolly-flatbed"></i>&ensp; Cập nhật giao hàng</button>
+                    <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
+                            class="fas fa-calculator"></i>&ensp; Thanh toán</button>
                     <button class="btn btn-primary" style="background-color: #656565; border: none;"><i
                             class="fas fa-file-export"></i>&ensp; Xuất file</button>
                 </div>
             </div>
-            <div class="tabTTKH">
+            <div class="tabDTGH">
                 <table class="table table-striped table-bordered dt-responsive nowrap"
                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
@@ -196,7 +150,7 @@
                             <th>Thời gian</th>
                             <th>Loại</th>
                             <th>Giá trị</th>
-                            <th>Dư nợ khách hàng</th>
+                            <th>Nợ cần trả đối tác</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -212,10 +166,6 @@
                 <div class="footerAddHH" style="text-align: right;">
                     <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
                             class="fas fa-cog"></i>&ensp; Điều chỉnh</button>
-                    <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
-                            class="fas fa-calculator"></i>&ensp; Thanh toán</button>
-                    <button class="btn btn-primary" style="background-color: #656565; border: none;"><i
-                            class="fas fa-file-export"></i>&ensp; Xuất file công nợ</button>
                     <button class="btn btn-primary" style="background-color: #656565; border: none;"><i
                             class="fas fa-file-export"></i>&ensp; Xuất file</button>
                 </div>
@@ -982,7 +932,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody id="dataTest">
-                                                            <tr onclick="onModalTTKH()">
+                                                            <tr onclick="onModalDTGH()">
                                                                 <td><input class="form-check-input" type="checkbox">
                                                                 </td>
                                                                 <td>Tiger Nixon</td>

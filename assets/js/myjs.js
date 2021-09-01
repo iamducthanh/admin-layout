@@ -71,6 +71,23 @@ function onTabNCC(index){
     }
 }
 
+let tabDTGH = document.getElementsByClassName("tabDTGH");
+let headDTGH = document.getElementsByClassName("menuTabDTGH");
+for(let i = 1;i<tabDTGH.length;i++){
+    tabDTGH[i].style.display = 'none';
+}
+function onTabDTGH(index){
+    for(let i = 0;i<tabDTGH.length;i++){
+        if(i==index){
+            headDTGH[i].style.borderBottom = '2px solid #564ab1'
+            tabDTGH[i].style.display = 'unset';
+        } else {
+            headDTGH[i].style.borderBottom = '0px'
+            tabDTGH[i].style.display = 'none';
+        }
+    }
+}
+
 const toBase64 = file => new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
@@ -115,6 +132,13 @@ function closeModalNCC(){
 function onModalNCC(){
     document.getElementById('tabNCC').style.display = 'unset'
 }
+function closeModalDTGH(){
+    document.getElementById('tabDTGH').style.display = 'none'
+}
+function onModalDTGH(){
+    document.getElementById('tabDTGH').style.display = 'unset'
+}
+
 $(function(){
     $('*').keyup(function(e){
         if(e.keyCode=='27'){
