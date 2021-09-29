@@ -1010,6 +1010,7 @@
                 // console.log(inputI[i].value);
                 let data = inputI[i].value.substring(inputI[i].value.indexOf(",") + 1, inputI[i].value.length)
                 let name = uuid();
+                console.log("Đang up load ảnh thứ " + i);
                 await fetch('https://api.github.com/repos/phonghotkgd2k1/image_public/contents/' + name + '.jpg', {
                     method: 'PUT',
                     headers: {
