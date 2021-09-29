@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;"
+        id="tabAddKH">
+        <div aria-labelledby="swal2-title" id="thanh1" aria-describedby="swal2-content"
+            class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive"
+            aria-modal="true" style="display: flex; width: 90%;">
+            <button type="button" class="swal2-close" onclick="closeModalAddKH()">×</button>
+            <div class="head">
+                <h5>Thêm khách hàng</h5>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <img width="100%"
+                        src="https://th.bing.com/th/id/R.9635afcaa4e199c0980ecba1c9224535?rik=ehll7i3Ht4sB3w&pid=ImgRaw&r=0"
+                        alt="">
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã khách
+                            hàng:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Mã khách hàng">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Tên khách
+                            hàng:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Tên khách hàng">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Điện thoại:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Điện thoại">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ngày sinh:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="date" placeholder="Ngày sinh">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Giới tính:</label>
+                        <div class="col-sm-8">
+                            <input class="form-check-input" type="radio" checked name="gioiTinh">
+                            <p class="font-size-14" style="display: inline;">Nam</p> &ensp;
+                            <input class="form-check-input" type="radio" name="gioiTinh">
+                            <p class="font-size-14" style="display: inline;">Nữ</p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Địa chỉ:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Địa chỉ">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Khu vực:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Khu vực">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Phường xã:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Phường xã">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Loại khách:</label>
+                        <div class="col-sm-8">
+                            <input class="form-check-input" type="radio" checked name="type">
+                            <p class="font-size-14" style="display: inline;">Cá nhân</p> &ensp;
+                            <input class="form-check-input" type="radio" name="type">
+                            <p class="font-size-14" style="display: inline;">Công ty</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Mã số thuế:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Mã số thuế">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Email:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Facebook:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Facebook">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Nhóm:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control myInputNoBorder" type="text" placeholder="Nhóm">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label font-size-14">Ghi chú:</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control myInputNoBorder" name="" id="" cols="30"
+                                rows="5">Ghi chú</textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footerAddHH" style="text-align: right;">
+                <button class="btn btn-primary" style="background-color: #4bac4d; border: none;"><i
+                        class="fas fa-user-check"></i>&ensp; Lưu</button>
+                <button class="btn btn-primary" style="background-color: #656565; border: none;"
+                    onclick="closeModalAddKH()"><i class="fas fa-ban"></i>&ensp; Bỏ qua</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

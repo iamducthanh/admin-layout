@@ -188,18 +188,20 @@
                                     <h4 class="card-title">Ảnh sản phẩm</h4>
                                 </div>
                                 <div class="col-lg-3" style="text-align: right;">
-                                    <button class="btn btn-primary" style="margin-bottom: 10px;" onclick="selectImage()">Thêm ảnh sản phẩm</button>
+                                    <button class="btn btn-primary" style="margin-bottom: 10px;"
+                                        onclick="selectImage()">Thêm ảnh sản phẩm</button>
                                     <button class="btn btn-primary" onclick="submitImage()">Test Submit</button>
                                 </div>
-                               
+
                             </div>
                             <div id="containerImageOut">
-                                
+
                             </div>
-                            <input type="file" style="display: none;" onchange="setDataImage()" id="inputImage">
+                            <input type="file" accept=".jpg" style="display: none;" onchange="setDataImage()"
+                                id="inputImage">
                             <div class="mb-5">
                                 <div class="dropzone dz-clickable dz-started" id="imagePreview">
-        
+
 
                                 </div>
                             </div>
@@ -964,7 +966,7 @@
             }
         }
         onDataTest();
-        function selectImage(){
+        function selectImage() {
             document.getElementById("inputImage").click();
         }
 
@@ -1000,17 +1002,36 @@
             out.appendChild(dataInput);
         }
 
-        function submitImage(){
+        async function submitImage() {
             let inputI = document.getElementsByName("fileImage");
             let arrI = [];
-            for(let i=0;i<inputI.length;i++){
+            for (let i = 0; i < inputI.length; i++) {
                 arrI[i] = inputI[i].value;
+                // console.log(inputI[i].value);
+                let data = inputI[i].value.substring(inputI[i].value.indexOf(",") + 1, inputI[i].value.length)
+                let name = uuid();
+                await fetch('https://api.github.com/repos/phonghotkgd2k1/image_public/contents/' + name + '.jpg', {
+                    method: 'PUT',
+                    headers: {
+                        "Authorization": "Bearer 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",
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then(response => response.json())
+                    .then(out => {
+                            console.log("up thành công");
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+
             }
             alert(arrI.length + " ảnh")
             // console.log(JSON.stringify(arrI))
         }
 
-        function deleteImage(id){
+        function deleteImage(id) {
             console.log("delete " + id);
             var deleteI = document.getElementsByClassName(id);
             document.getElementById("containerImageOut").removeChild(document.getElementById(id))
